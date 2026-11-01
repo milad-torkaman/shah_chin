@@ -3,7 +3,7 @@ from enum import Enum
 
 class Borad:
     def __init__(self):
-        self.board = [['' for column in range(8)] for _ in range(8)]
+        
 
     def show(self):
         board = self.board
@@ -27,7 +27,7 @@ class Piece:
     def __init__(self,
                  *,
                  color: Color,
-                 postion: (int, int) = (0, 0),
+                 postion = (0, 0),
                 ):
         self.color = color
         self.postion = postion
@@ -37,7 +37,7 @@ class King(Piece):
     def __init__(self,
                  *,
                  color: Color,
-                 postion: (int, int) = (0, 0)):
+                 postion = (0, 0)):
         super().__init__(
             color = color,
             postion=postion
@@ -57,7 +57,7 @@ class Queen(Piece):
     def __init__(self,
                 *,
                 color: Color,
-                postion: (int, int) = (0, 0)):
+                postion = (0, 0)):
         super().__init__(
             color = color,
             postion=postion
@@ -77,7 +77,7 @@ class Bishop(Piece):
     def __init__(self,
                 *,
                 color: Color,
-                postion: (int, int) = (0, 0)):
+                postion = (0, 0)):
         super().__init__(
             color = color,
             postion=postion
@@ -96,7 +96,7 @@ class Rook(Piece):
     def __init__(self,
                 *,
                 color: Color,
-                postion: (int, int) = (0, 0)):
+                postion = (0, 0)):
         super().__init__(
             color = color,
             postion=postion
@@ -112,11 +112,11 @@ class Rook(Piece):
     def symbol(self):
         return '♜' if self.color == Color.BLACK else '♖'
 
-class Bishop(Piece):
+class Knight(Piece):
     def __init__(self,
                 *,
                 color: Color,
-                postion: (int, int) = (0, 0)):
+                postion = (0, 0)):
         super().__init__(
             color = color,
             postion=postion
@@ -137,7 +137,7 @@ class Pawn(Piece):
     def __init__(self,
                 *,
                 color: Color,
-                postion: (int, int) = (0, 0)):
+                postion = (0, 0)):
         super().__init__(
             color = color,
             postion=postion
@@ -163,11 +163,10 @@ class Pawn(Piece):
 
     @property
     def symbol(self):
-        return '♞' if self.color == Color.BLACK else '♘'
+        return '♟' if self.color == Color.BLACK else '♙'
 
 if __name__ == "__main__":
-    pawn = Pawn(color= Color.BLACK,postion=(0, 0))
-
-    print(pawn.actions)
+    pass
+    
 
     
