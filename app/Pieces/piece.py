@@ -1,4 +1,4 @@
-from .piece import Piece
+from app.utils.color import Color
 
 class Piece:
     def __init__(self,
