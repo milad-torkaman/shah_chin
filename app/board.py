@@ -1,7 +1,7 @@
 from app.Pieces import King, Queen, Rook, Bishop, Knight, Pawn
-from app.tools import Color
+from app.utils import Color
 
-class Borad:
+class Board:
     def __init__(self):
         """ Inisial Board
         """
@@ -33,20 +33,9 @@ class Borad:
         return self.show()
 
 
-
-
-
-
-
-
-
-
-
 if __name__ == "__main__":
     pass
-    """
-    crate board
-    """
+
     
 
     
