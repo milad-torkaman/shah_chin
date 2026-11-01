@@ -1,5 +1,5 @@
 from app.Pieces import King, Queen, Rook, Bishop, Knight, Pawn
-from app.utils import Color
+from app.utils.color import Color
 
 class Board:
     def __init__(self):
@@ -14,7 +14,9 @@ class Board:
             Bishop ( color=Color.BLACK, postion=(2, 0) ),
             Knight ( color=Color.BLACK, postion=(1, 0) ),
             Rook   ( color=Color.BLACK, postion=(0, 0) ),
-        ].extend( [Pawn(color=Color.BLACK, postion= (x, 1)) for x in range(8)])
+        ]
+        self.team_black.extend( [Pawn(color=Color.BLACK, postion= (x, 1)) for x in range(8)])
+
         self.team_white = [
             Rook   ( color=Color.WHITE, postion=(7, 0) ),
             Knight ( color=Color.WHITE, postion=(6, 0) ),
@@ -24,7 +26,8 @@ class Board:
             Bishop ( color=Color.WHITE, postion=(2, 0) ),
             Knight ( color=Color.WHITE, postion=(1, 0) ),
             Rook   ( color=Color.WHITE, postion=(0, 0) ),
-        ].extend( [Pawn(color=Color.BLACK, postion= (x, 1)) for x in range(8)])
+        ]
+        self.team_white.extend( [Pawn(color=Color.WHITE, postion= (x, 1)) for x in range(8)])
 
     def show(self):
         pass
@@ -32,9 +35,6 @@ class Board:
     def __str__(self):
         return self.show()
 
-
-if __name__ == "__main__":
-    pass
 
     
 
