@@ -1,4 +1,5 @@
 from .piece import Piece
+from app.utils.color import Color
 
 class Rook(Piece):
     def __init__(self,
@@ -10,6 +11,7 @@ class Rook(Piece):
             postion=postion
         )
         self.point = 5
+        
 
         self.actions = self.attacks = [
             (0, 1, -1),

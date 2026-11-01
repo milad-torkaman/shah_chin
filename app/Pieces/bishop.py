@@ -1,4 +1,5 @@
 from .piece import Piece
+from app.utils.color import Color
 
 class Bishop(Piece):
     def __init__(self,
@@ -10,6 +11,7 @@ class Bishop(Piece):
             postion=postion
         )
         self.point = 3
+        
 
         self.actions = self.attacks = (
             (-1, 1, -1), (1, 1, -1),

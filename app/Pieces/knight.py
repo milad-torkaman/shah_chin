@@ -1,4 +1,5 @@
 from .piece import Piece
+from app.utils.color import Color
 
 class Knight(Piece):
     def __init__(self,
@@ -10,6 +11,7 @@ class Knight(Piece):
             postion=postion
         )
         self.point = 3
+        
 
         self.actions = self.attacks = [
             (2, -1, 1), (2, 1, 1),

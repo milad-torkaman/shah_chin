@@ -1,4 +1,5 @@
 from .piece import Piece
+from app.utils.color import Color
 
 class Pawn(Piece):
     def __init__(self,
@@ -10,6 +11,7 @@ class Pawn(Piece):
             postion=postion
         )
         self.point = 1
+        
         
     @property
     def actions(self):
